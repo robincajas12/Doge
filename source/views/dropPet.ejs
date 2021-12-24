@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title %> </title>
+</head>
+<body>
+    <form action="/subirPerro" method="post"  enctype="multipart/form-data">
+        <input type="text" placeholder="Titulo" name="titulo">
+        <input type="text" placeholder="Descripción" name="description">
+        <input type="file" placeholder="Foto de mascota" accept="image/png,image/jpeg,image/jpg" name="mascota">
+        <button type="submit" name="submit">Poner en Adopción</button>
+    </form>
+</body>
+</html>
