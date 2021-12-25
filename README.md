@@ -1,3 +1,6 @@
 # Doge
 Emprendimiento y proyecto para primer quimestre de 3ero a informatica
-![alt text](https://scontent.fuio16-1.fna.fbcdn.net/v/t1.15752-9/267855182_272108551568166_412835789157060700_n.png?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_ohc=8VMX8-qz904AX-_giUj&_nc_ht=scontent.fuio16-1.fna&oh=03_AVJETiFwQH77bXsX-COKqnv99kdAbNNhLkV3AfK9Qa1c8w&oe=61EE2281)
+<p align="center">
+  <img src="https://scontent.fuio16-1.fna.fbcdn.net/v/t1.15752-9/267855182_272108551568166_412835789157060700_n.png?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_ohc=8VMX8-qz904AX-_giUj&_nc_ht=scontent.fuio16-1.fna&oh=03_AVJETiFwQH77bXsX-COKqnv99kdAbNNhLkV3AfK9Qa1c8w&oe=61EE2281" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
