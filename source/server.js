@@ -3,7 +3,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const {validarUser} = require('./js/sign_up');
 const fileUpload = require('express-fileupload');
-const {subirPost, obtenerPerro } = require('./js/sqlconnexion');
 const {iniciarSession} = require('./sqlLiteManager');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
