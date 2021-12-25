@@ -3,12 +3,19 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const {validarUser} = require('./js/sign_up');
 const fileUpload = require('express-fileupload');
-const { iniciarSession, subirPost, obtenerPerro } = require('./js/sqlconnexion');
+const {subirPost, obtenerPerro } = require('./js/sqlconnexion');
+const {iniciarSession} = require('./sqlLiteManager');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(fileUpload());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+
+
+
+
+
 app.post('/register', (req,res)=>{
     let userData = {
         username : req.body.username,
@@ -16,8 +23,9 @@ app.post('/register', (req,res)=>{
         email : req.body.email,
         password : req.body.password
     }
-    validarUser(userData,(data)=>{
-        res.send(data);
+    validarUser(userData,(estaRegistrado)=>{
+        if(estaRegistrado === true) res.render(path.join(__dirname, "views", "login"), {title:'Login'});
+        else res.send("No se ha podido");
     })
 })
 app.post('/login',(req,res)=>{
@@ -29,13 +37,6 @@ app.post('/login',(req,res)=>{
         res.send(isLoggin);
     });
 })
-
-app.post('/subirPerro',(req,res)=>{
-    subirPost(req.files.mascota.data.toString('base64'));
-    obtenerPerro((result)=>{
-        res.send(`<img src="data:image/png;base64,${result.recordset[0].IMG}">`);
-    })
-});
 
 
 //Router
