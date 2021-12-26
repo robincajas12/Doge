@@ -63,7 +63,22 @@ async function registrarPost(dataSession, dataPost, callback) {
         }else callback(false);
     })
 }
+
+
+
+// API-----------------------------------
+async function obtenerMascotas(callback) {
+    db.all(`SELECT * FROM PUBLICACIONES`,(err,row)=>{
+        console.log(row);
+        if(err) callback(null, false)
+        else{
+            if(row.length != 0) callback(row,true);
+            else callback(null ,false);
+        }
+    })
+}
 exports.obtenerUser = obtenerUser;
 exports.registrarAlUser = registrarAlUser;
 exports.iniciarSession = iniciarSession;
 exports.registrarPost = registrarPost;
+exports.obtenerMascotas = obtenerMascotas;

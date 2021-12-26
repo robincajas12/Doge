@@ -1,0 +1,346 @@
+/* Se coloca la fuente regular de duolingo a toda la página */
+html {
+    font-family: duolingo2, Arial;
+}
+/* Elimina el margen por defecto del ordenador */
+body {
+    margin: 0;
+
+}
+
+/* Todos los h1 tienen la fuente de duolingo bold */
+
+h1 {
+    font-family: duolingo, Arial;
+}
+
+/* Con esto ajusto el espacio en el encabezado */
+
+.contenedor {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/*
+diseño de las imagenes 
+img-mascota
+*/
+.img-mascota{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+#loading{
+    width: 50px;
+    height: 50px;
+    animation: rotar 1.5s infinite;
+    animation-timing-function:linear;
+    order: 999;
+}
+@keyframes rotar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* Encabezado fijo */
+.encabezado {
+    background-color: #F1BA52;
+    color: #FFF;
+    border-radius: 0 0 30px 30px; 
+
+    position: fixed;
+    width: 100%;
+}
+
+/* Color de texto en el encabezado y quitar la decoracion, añadiendo un borde */
+
+.encabezado a {
+    color: #F1BA52;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* Alinear los links del encabezado y el logo */
+
+.contenedor-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ELiminar el estilo de listas en la navegacion */
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Colocar lado a lado en la navegacion */
+.nav ul li {
+    display: inline-block;
+}
+/* Color de fondo de los links en el nav agregando espaciado interno y una transicion para suavizar el cambio   */
+.nav ul li a {
+    background-color: #1D0A3F;
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+/* hover es la propiedad que hace cambiar cualquier objeto cuando se pase el cursor por encima */
+.nav ul li a:hover {
+    background-color: #FFF;
+    cursor: pointer;
+    border-radius: 20px;
+}
+/* como el header esta fijo, al contenido principal se le añade un espaciado interno arriba, abajo y a los lados */
+/* .contenedor2 {
+    padding: 0px 0;
+} */
+
+/* Aqui va la edicion del contenido principal */
+
+
+/* Añadi un borde a la imagen, con un color de fondo si falta, la propiedad background sirve de mucho en vez de hacer una mascara de recorte, se especifica el alto y ancho de la imagen añadiendo atributos de no repetir, centrar y utilizar como caratula seguido de eso, utilizando flexbox para alinear el texto que queremos resaltar*/
+
+.imagenprincipal{
+    border-radius: 30px;
+    color: white;
+    width: 674px;
+    height: 557px;
+    /* background: url(/img/gato.jpg) no-repeat center/cover; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+/* Editar la forma del boton en la imagen principal  */
+
+.btn {
+    color: #F1BA52;
+    display: block;
+    width: 150px;
+    padding: 20px;
+    background-color: #1D0A3F;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Cuando pase el cursor, cambia las propiedades a las que se le describio */
+.btn:hover {
+
+    background-color: #FFF;
+    cursor: pointer;
+    border-radius: 30px;    
+
+}
+
+/* Añadi un margen para que no se apegue mucho a la imagen  */
+.imagenprincipal h3, a {
+    margin: 30px;
+
+}
+/* Agrande el tamaño de la frase en la imagen principal  */
+.imagenprincipal h3 {
+    font-size: 30px;
+}
+
+.contenidoprincipal{
+    /* background-color: cornflowerblue; */
+    width: min-content;
+    padding: 10px;
+}
+
+/* Señalo la seccion que contiene los artiulos añadiendo un espaciado interno y un flexbox para posicionar a lado  */
+
+section article {
+    /* background-color: aqua; */
+    padding: 10px;
+    display: flex;
+}
+.adoptame__article{
+    cursor:pointer;
+}
+/*  
+.contadi {
+    background-color: brown; 
+    
+} */
+ 
+
+/* Añadi un margen a cada articulo para que no se vean juntos */
+.contadi article {
+    background-color: #e2e2e2;
+    margin: 10px 10px;
+    align-items: center;
+    border-radius: 30px;
+    display: flex;
+}
+.contadi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Ajustar el texto con un margen a la izquiera para que no se pegue mucho, su bloque ocupa el 100% y su altura es el contenido minimo */
+
+.contadi article p {
+    /* background-color: chocolate; */
+    margin-left: 20px;
+    width: 100%;
+    height: min-content;
+    
+}
+
+/* Centrar el subtitulo de el contenido adicional */
+
+.tsecundario{
+    text-align: center;
+}
+
+/* Donde esta la imagen principal, el contenedor ocupa el espacio minimo sin ocultar el contenido */
+
+.div1 {
+    /* background-color: darkgreen; */
+    width: min-content;
+}
+
+
+/* .div2 {
+
+    background-color: darkorange;
+} */
+
+/* Asignamos un ancho y alto acorde a la medida para que no se coloque por debajo de la imagen principal  */
+
+.div2 {
+    /* background-color: aqua; */
+    width: 48%;
+    height: 557px;
+    overflow-y: scroll;
+    float: right;
+    
+}
+
+/* Todas las imagenes de los articulos, es decir del contenido adicional no tendran un tamaño maximo de 200px */  
+/* .contadi article img{
+    width: 200px;
+} */
+
+/* Colocamos el contenido adicional a lado del principal */
+
+.alinear {
+    display: inline-block;
+}
+
+/* .alinear {
+    background-color: lawngreen;
+    
+} */
+
+/* Configuro el espacio interno de los bloques de todo el contenido excepto el encabezado  */
+.contenedor2 {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+/* Personalizar la scroollbar del body y seguido de eso del contenido adicional*/
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.div2::-webkit-scrollbar{
+    width: 8px;
+}
+
+
+.div2::-webkit-scrollbar-thumb{
+    background-color: #F1BA52;
+    border-radius: 10px;
+}
+
+/* Personalizar las imagenes de los articulos  */
+
+.imagen {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    background: url(/img/cuadro\ \(1\).jpg) no-repeat center/cover;
+
+}
+
+
+.imagen2 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(2\).jpg) no-repeat center/cover; */
+
+}
+
+.imagen3 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(3\).jpg) no-repeat center/cover; */
+
+}
+
+.imagen4 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(4\).jpg) no-repeat center/cover; */
+
+}
+
+.imagen4 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(4\).jpg) no-repeat center/cover; */
+
+}
+
+.imagen5 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(5\).jpg) no-repeat center/cover; */
+
+}
+
+
+.imagen6 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(6\).jpg) no-repeat center/cover; */
+
+}
+
+
+.imagen7 {
+    border-radius: 30px;
+    color: rgb(99, 99, 99);
+    width: 320px;
+    height: 150px;
+    /* background: url(/img/cuadro\ \(7\).jpg) no-repeat center/cover; */
+
+}

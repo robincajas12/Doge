@@ -23,4 +23,7 @@ router.get('/dropPet',(req,res)=>{
         title:'Pon en adopción :3'
     })
 });
+router.get('/home',(req,res)=>{
+    res.render('home');
+});
 module.exports = router;

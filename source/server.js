@@ -4,9 +4,10 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const {validarUser} = require('./js/sign_up');
 const fileUpload = require('express-fileupload');
-const {iniciarSession, registrarPost} = require('./sqlLiteManager');
+const {iniciarSession, registrarPost, obtenerMascotas} = require('./sqlLiteManager');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 app.use(fileUpload());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -52,12 +53,47 @@ app.post('/subirPerro', (req,res)=>{
                 title:req.body.title,
                 description:req.body.description
             },(isPostRegistrado)=>{
-                if(isPostRegistrado) res.render('home');
+                if(isPostRegistrado) res.redirect('home');
                 else res.send('Error');
             });
         }
     });
 });
+
+
+
+
+
+
+
+//Rest Api
+app.get('/api/dogs', (req,res)=>{
+    let arryMascotas = [];
+    obtenerMascotas((info, thereIsInfo)=>{
+        if(thereIsInfo){
+            info.forEach(mascota => {
+                const data = fs.readFileSync(pathSubirMedia+mascota.URL_IMG,'base64',(err,data)=>{
+                });
+                arryMascotas.push({
+                    title:mascota.TITLE,
+                    description: mascota.DESCRIPTION,
+                    urlImg:data
+                })
+            });
+            res.json(arryMascotas);
+        }
+    });
+})
+
+
+
+
+
+
+
+
+
+
 //Router
 app.use(require('./routes/index'));
 app.use(express.static(path.join(__dirname, 'public')));
