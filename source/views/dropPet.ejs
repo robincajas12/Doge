@@ -8,10 +8,18 @@
 </head>
 <body>
     <form action="/subirPerro" method="post"  enctype="multipart/form-data">
-        <input type="text" placeholder="Titulo" name="titulo">
+        <input id="user" type="hidden" name="user">
+        <input id="clave" type="hidden" name="clave">
+        <input type="text" placeholder="Titulo" name="title">
         <input type="text" placeholder="Descripción" name="description">
         <input type="file" placeholder="Foto de mascota" accept="image/png,image/jpeg,image/jpg" name="mascota">
         <button type="submit" name="submit">Poner en Adopción</button>
     </form>
+    <script>
+    const user = document.getElementById('user');
+    const clave = document.getElementById('clave'); 
+    user.value = localStorage.getItem('email');   
+    clave.value = localStorage.getItem('password');
+    </script>
 </body>
 </html>

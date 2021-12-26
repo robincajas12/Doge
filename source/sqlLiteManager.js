@@ -29,6 +29,7 @@ async function registrarAlUser(userData) {
 }
 
 async function iniciarSession(dataSession, callback) {
+    console.log(dataSession);
     db.all(`SELECT * FROM USERS WHERE EMAIL = $email AND CLAVE=$clave`,{
         $email:dataSession.email,
         $clave:dataSession.password
@@ -41,6 +42,28 @@ async function iniciarSession(dataSession, callback) {
         }
     })
 }
+
+async function registrarPost(dataSession, dataPost, callback) {
+    iniciarSession(dataSession, (row,isLoggin)=>{
+        if(isLoggin)
+        {
+            console.log('-----||||||||||||||||||||AAAAAAAAAA ESTAS REGISTRANDO AL POST ||||||||||||||||||||||||||||||---')
+
+            let idUser = row[0].ID;
+            console.log(idUser);
+            obtenerUser(row[0].EMAIL, row[0].USERNAME, 'ID', (user)=>idUser = user[0].ID);
+            console.log(idUser);
+            db.run(`INSERT INTO PUBLICACIONES(ID_AUTOR,URL_IMG,TITLE,DESCRIPTION) VALUES($idAutor, $urlImg, $title,$description)`,
+                {
+                    $idAutor:idUser,
+                    $urlImg:dataPost.url,
+                    $title: dataPost.title,
+                    $description: dataPost.description
+                },()=>callback(true));
+        }else callback(false);
+    })
+}
 exports.obtenerUser = obtenerUser;
 exports.registrarAlUser = registrarAlUser;
 exports.iniciarSession = iniciarSession;
+exports.registrarPost = registrarPost;
