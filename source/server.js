@@ -106,4 +106,6 @@ app.post('/api/user', (req,res)=>{
 app.use(require('./routes/index'));
 app.use(express.static(path.join(__dirname, 'public')));
 //Listeing the server
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log('Oh! me estoy corriendo en heroku');
+});
