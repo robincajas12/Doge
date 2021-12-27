@@ -12,6 +12,7 @@ function iniciarVerificacion(ruta)
 }
 async function verificarUser(data, ruta)
 {
+    console.log('--------------------------')
     const a = await fetch('/api/user',{
         method: 'POST',
         body:JSON.stringify(data),   
@@ -19,7 +20,8 @@ async function verificarUser(data, ruta)
     })
     .then(res=>res.json())
     .then(res=>{
-        if(res == false) location.href = '/login';
+        console.log(res)
+        if(res.isLogin == false){location.href = '/login'; localStorage.clear();}
         else location.href = '/home';
     });
 }

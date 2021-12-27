@@ -22,6 +22,6 @@ async function verificarUser(data)
     })
     .then(res=>res.json())
     .then(res=>{
-        if(res == false) location.href = '/login';
+        if(res.isLogin == false) location.href = '/login';
     });
 }
