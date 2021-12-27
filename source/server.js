@@ -106,6 +106,4 @@ app.post('/api/user', (req,res)=>{
 app.use(require('./routes/index'));
 app.use(express.static(path.join(__dirname, 'public')));
 //Listeing the server
-app.listen(3000),()=>{
-    console.log('The server works!');
-};
+app.listen(process.env.PORT || 3000);
