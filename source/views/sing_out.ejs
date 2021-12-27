@@ -1,27 +1,65 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/form.css">
-    <title><%=title %> </title>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" href="css/form.css"> -->
+    <script src="js/isLoginLogin.js"></script>
+    <link rel="stylesheet" href="css/sing_out.css">
+    <link rel="stylesheet" href="font/fuentes.css">
+    <link rel="icon" href="img/Dogeicon.ico">
+
+    <title> Doge Association - Registrarse </title>
 </head>
+
 <body>
+    
     <section class="sing-up__container">
-        <h2>Registrate</h2>
+
+        <div class="logo">
+            <p class="logo_text">
+                Te ayudamos a encontrar a tu mascota ideal 
+            </p>
+        </div>
+
+
         <form class="sing-up__container-form" method="post" action="/register">
-            <input class="sing-up__container-form-input" required type="text" name="username" placeholder="Username">
-            <input class="sing-up__container-form-input" required type="number" name="numero" placeholder="Numero Celular">
-            <input class="sing-up__container-form-input" required type="email" name="email" placeholder="Ingresa tu email">
-            <input class="sing-up__container-form-input" required type="password" name="password" placeholder="Ingresa tu password">
-            <button class="sing-up__container-form-button" type="submit">Sing up</button>
+
+            <h2>Regístrate</h2>
+
+
+            <label for="username"> Nombre de usuario:</label>
+            <input class="sing-up__container-form-input" required type="text" name="username" placeholder="Nombre de usuario">
+
+            <label for="tel"> Numero celular:</label>
+            <input class="sing-up__container-form-input" required type="tel" name="numero" placeholder="Número Celular">
+
+            <label for="email">Correo Electrónico:</label>
+            <input class="sing-up__container-form-input" required type="email" name="email" placeholder="Correo Electrónico">
+            
+            <label for="password">Contrasña:</label>
+            <input class="sing-up__container-form-input" required type="password" name="password" placeholder="Contraseña nueva">
+
+            <button class="sing-up__container-form-button" type="submit">Registrarse</button>
+
+            <p>¿Ya tienes una cuenta? <a href="#"> Inicia Sesión</a> </p>
+
+            <!-- href="/login" -->
+
         </form>
-        <a href="/login">¿Ya tienes una cuenta?</a>
+
+        
+
     </section>
-    <script src="js/main.js"></script>
+    <script>
+        iniciarVerificacion('/sing_out');
+    </script>
 </body>
 </html>

@@ -37,3 +37,10 @@ fetch('/api/dogs').then(res => res.json()).then(res =>{
     });
     contenedorPerros.appendChild(fragmento);
 })
+
+
+const salir = document.getElementById('salir');
+salir.addEventListener('click',()=>{
+    localStorage.clear();
+    location.href = '/login';
+})

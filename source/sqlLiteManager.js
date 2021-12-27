@@ -69,7 +69,6 @@ async function registrarPost(dataSession, dataPost, callback) {
 // API-----------------------------------
 async function obtenerMascotas(callback) {
     db.all(`SELECT * FROM PUBLICACIONES`,(err,row)=>{
-        console.log(row);
         if(err) callback(null, false)
         else{
             if(row.length != 0) callback(row,true);

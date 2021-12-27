@@ -35,7 +35,8 @@ app.post('/login',(req,res)=>{
         password: req.body.password
     }
     iniciarSession(dataSession, (respuesta, isLoggin)=>{
-        res.send(isLoggin);
+        if(isLoggin) res.redirect('/home')
+        else res.redirect('/login');
     });
 })
 const pathSubirMedia = 'C:/Users/USER/OneDrive/Documentos/PROGRAMACIÓN/recursos_doge/img_publicaciones/';
@@ -84,6 +85,13 @@ app.get('/api/dogs', (req,res)=>{
         }
     });
 })
+
+app.post('/api/user', (req,res)=>{
+    console.log(req.body);
+    iniciarSession(req.body, (row, isTrue)=>{
+        res.json({isLoggin:isTrue});
+    })
+});
 
 
 
