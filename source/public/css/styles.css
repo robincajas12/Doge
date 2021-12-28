@@ -151,10 +151,11 @@ img-mascota
 /* Agrande el tamaño de la frase en la imagen principal  */
 .imagenprincipal h3 {
     font-size: 30px;
+    color: #F1BA52;
 }
 
 .contenidoprincipal{
-    /* background-color: cornflowerblue; */
+    margin-top: 150px;
     width: min-content;
     padding: 10px;
 }
@@ -267,80 +268,23 @@ body::-webkit-scrollbar {
     background-color: #F1BA52;
     border-radius: 10px;
 }
-
+.div2{
+    height: 90vh;
+    overflow-y:scroll;
+}
 /* Personalizar las imagenes de los articulos  */
 
 .imagen {
     border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
     height: 150px;
-    background: url(/img/cuadro\ \(1\).jpg) no-repeat center/cover;
-
+    width: 150px;
 }
-
-
-.imagen2 {
-    border-radius: 30px;
+.adoptame__article{
+    width: 40vw;
     color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(2\).jpg) no-repeat center/cover; */
-
+    border-radius: 30px;
 }
-
-.imagen3 {
-    border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(3\).jpg) no-repeat center/cover; */
-
-}
-
-.imagen4 {
-    border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(4\).jpg) no-repeat center/cover; */
-
-}
-
-.imagen4 {
-    border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(4\).jpg) no-repeat center/cover; */
-
-}
-
-.imagen5 {
-    border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(5\).jpg) no-repeat center/cover; */
-
-}
-
-
-.imagen6 {
-    border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(6\).jpg) no-repeat center/cover; */
-
-}
-
-
-.imagen7 {
-    border-radius: 30px;
-    color: rgb(99, 99, 99);
-    width: 320px;
-    height: 150px;
-    /* background: url(/img/cuadro\ \(7\).jpg) no-repeat center/cover; */
-
+.adoptame__article:hover
+{
+      color: rgb(99, 99, 99);
 }
