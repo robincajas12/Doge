@@ -76,8 +76,20 @@ async function obtenerMascotas(callback) {
         }
     })
 }
+
+async function obtenerMascotasById(id ,callback) {
+    console.log(id);
+    db.all(`SELECT * FROM PUBLICACIONES WHERE ID=${id}`,(err,row)=>{
+        if(err) callback(null, false)
+        else{
+            if(row.length != 0) callback(row,true);
+            else callback(null ,false);
+        }
+    })
+}
 exports.obtenerUser = obtenerUser;
 exports.registrarAlUser = registrarAlUser;
 exports.iniciarSession = iniciarSession;
 exports.registrarPost = registrarPost;
 exports.obtenerMascotas = obtenerMascotas;
+exports.obtenerMascotasById = obtenerMascotasById;

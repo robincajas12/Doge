@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const {validarUser} = require('./js/sign_up');
 const fileUpload = require('express-fileupload');
-const {iniciarSession, registrarPost, obtenerMascotas} = require('./sqlLiteManager');
+const {iniciarSession, registrarPost, obtenerMascotas, obtenerMascotasById} = require('./sqlLiteManager');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -77,6 +77,7 @@ app.get('/api/dogs', (req,res)=>{
                 const data = fs.readFileSync(pathSubirMedia+mascota.URL_IMG,'base64',(err,data)=>{
                 });
                 arryMascotas.push({
+                    id:mascota.ID,
                     title:mascota.TITLE,
                     description: mascota.DESCRIPTION,
                     urlImg:data
@@ -86,10 +87,19 @@ app.get('/api/dogs', (req,res)=>{
         }
     });
 })
-
+app.get('/api/dogs/:id', (req,res)=>{
+    let arryMascotas = [];
+    const id = req.params.id;
+    obtenerMascotasById(id,(info, thereIsInfo)=>{
+            res.json({info:info});
+    });
+});
 app.post('/api/user', (req,res)=>{
-    console.log(req.body);
-    iniciarSession(req.body, (row, isTrue)=>{
+    const dataSession = {
+        email:req.body.email,
+        password: req.body.password
+    }
+    iniciarSession(dataSession, (row, isTrue)=>{
         console.log(isTrue);
         res.json({isLogin:isTrue});
     })
@@ -111,3 +121,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(process.env.PORT || 3000, ()=>{
     console.log('Oh! me estoy corriendo en heroku');
 });
+
+
+function pathDbImg(){
+    return pathSubirMedia;
+}
+exports.pathDbImg = pathDbImg;
