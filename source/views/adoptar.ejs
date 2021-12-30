@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/adoptar.css">
+    <link rel="icon" href="/img/Dogeicon.ico">
+
+    <title>Adoptar</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="img">
+            <img src="<%=data.img%> " alt="foto publicacion">
+        </div>
+        <div class="div_form">
+            <form class="form">
+                <div class="container__form">
+                    <h2> Datos de la mascota y contacto </h2>
+                    <label for="text"> Nombre de la mascota </label>
+                    <input type="text" value="<%=data.petName%> " class="readonly" readonly>
+        
+                    <label for="textarea">Descripción</label>
+                    <input type="text" placeholder="" value="<%=data.description %> " class="readonly" readonly>
+        
+                    <label for="number">Número de telefono del propietario</label>
+                    <input type="tel" placeholder="" value="<%=data.phone %>" name="input_tel" id="#" title="" readonly>
+        
+        
+                    <h2> Datos para poder adoptar</h2>
+                    <label for="">Dirección exacta del lugar donde permanecerá el animal (incluir sector)</label>
+                    <input type="text" placeholder="Dirección" class="direction" required>
+        
+                    <label for="tel">Introduce tu número de teléfono</label>
+                    <input type="tel" name="input_tel_owner" id="#" required>
+        
+                    <label for="comment"> ¿Por qué quieres adoptar a esta mascota? (No es obligatorio) </label>
+                    <textarea name="comment" id="#" cols="30" rows= "5" ></textarea>
+        
+                </div>
+                <input type="submit" value="Realizar solicitud" class="submit"> 
+            </form>   
+        </div>
+    </div>
+</body>
+</html>
