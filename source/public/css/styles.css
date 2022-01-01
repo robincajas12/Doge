@@ -5,7 +5,7 @@ html {
 /* Elimina el margen por defecto del ordenador */
 body {
     margin: 0;
-
+    padding: 0;
 }
 
 /* Todos los h1 tienen la fuente de duolingo bold */

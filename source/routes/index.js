@@ -62,4 +62,11 @@ router.get('/adoptar/:id',(req,res)=>{
         res.render('adoptar', {data:data})
     })
 })
+
+
+
+router.get('/tusPost',(req,res)=>{
+    res.render('tusPublicaciones');
+});
+
 module.exports = router;
