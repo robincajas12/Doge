@@ -1,7 +1,10 @@
-/* Se coloca la fuente regular de duolingo a toda la página */
-html {
-    font-family: duolingo2, Arial;
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
+html{
+    font-family: 'Signika Negative', sans-serif;
 }
+
+
 /* Elimina el margen por defecto del ordenador */
 body {
     margin: 0;
