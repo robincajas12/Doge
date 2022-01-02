@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <script>
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="/css/posts.css">
-
     <link rel="stylesheet" href="/css/nav.css">
-<!--
-    ci ya me acorde :V
-    acuerdate que tienes que guardar el proyecto antes de cambiar de rama :V 
-    ahora estando en la rama como hacemos un merge primero voy a cambiar algo aqui 
--->
-    <title>Busca una mascota este es dedesde la rama edizon</title>
+    <title>Busca una mascota</title>
 </head>
 <body>
-
     <div>
         <%- include('nav') %>
     </div>
-
      <section class="contenedor-perros">
-
          <h1 class="p_perros">Busca tu mascota favorita</h1>
-
          <div id="contenedor-perros">
             <img id="loading" src="/img/home/loading.svg">
-         </div>   
-           
+         </div>     
     </section>
-    
     <script src="/js/getPets.js"></script>
      <script src="/js/salir.js"></script>
 </body>
