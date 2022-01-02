@@ -7,6 +7,8 @@
     --Color-3: #f3c894;
     --Color-4: #d9804d;
     --Color-5: #a74b4b;
+    --Color-78:rgb(32, 32, 32);
+    --font-family2:'Signika Negative', sans-serif;
 }
 
 html {
@@ -374,4 +376,54 @@ body::-webkit-scrollbar-thumb{
 
 .notification_display {
     display: none;
+}
+.div__3img{
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.msg-home{
+    font-family: var(--font-family2);
+    font-size: 1.5em;
+    text-align: center;
+}
+.footer{
+    border-top: 1px solid var(--Color-78);
+    background-color: var(--Color-78);
+    text-align: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+.footer__ul{
+    list-style: none;
+}
+.footer__ul-li-a{
+    text-decoration: none;
+    color: var(--Color-4);
+}
+.container-img-fixed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container-carrusel{
+    padding-top: 50px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.info__users{
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    color: var(--Color-4);
 }
