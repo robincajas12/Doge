@@ -11,94 +11,16 @@
     --font-family2:'Signika Negative', sans-serif;
 }
 
-html {
-    font-family: 'Signika Negative',;
-    box-sizing: border-box;
-}
 
 /* Elimina el margen por defecto del ordenador */
 body {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
+    font-family: 'Signika Negative', Arial, Helvetica, sans-serif;
 }
 
 
-/* Con esto ajusto el espacio en el encabezado */
-
-.contenedor {
-    width: 80%;
-    height: 100px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-.img-mascota{
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Encabezado fijo */
-.encabezado {
-    background-color: #F1BA52;
-    color: #FFF;
-    border-radius: 0 0 30px 30px; 
-
-    position: fixed;
-    width: 100%;
-}
-
-
-/* Color de texto en el encabezado y quitar la decoracion, añadiendo un borde */
-
-.encabezado .a {
-    color: #F1BA52;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-/* Alinear los links del encabezado y el logo */
-
-.contenedor-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* ELiminar el estilo de listas en la navegacion */
-.nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* Colocar lado a lado en la navegacion */
-.nav ul .li {
-    display: inline-block;
-}
-/* Color de fondo de los links en el nav agregando espaciado interno y una transicion para suavizar el cambio   */
-.nav ul li .a {
-    background-color: #1D0A3F;
-    display: block;
-    padding: 10px 20px;
-    margin: 0 10px;
-    transition: all 0.3s ease;
-}
-/* hover es la propiedad que hace cambiar cualquier objeto cuando se pase el cursor por encima */
-.nav ul li .a:hover {
-    background-color: #FFF;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.notification {
-    width: 15px;
-    height: 15px;
-}
 /* Aqui va la edicion del contenido principal */
 
 
@@ -239,6 +161,7 @@ section article {
 
 /* Asignamos un ancho y alto acorde a la medida para que no se coloque por debajo de la imagen principal  */
 
+
 .div2 {
     /* background-color: aqua; */
     width: 48%;
@@ -248,16 +171,6 @@ section article {
     
 }
 
-/* Colocamos el contenido adicional a lado del principal */
-
-.alinear {
-    display: inline-block;
-}
-
-.contenedor2 {
-    padding-top: 100px;
-    padding-bottom: 0px;
-}
 
 /* Personalizar la scroollbar del body y seguido de eso del contenido adicional*/
 
@@ -283,6 +196,7 @@ body::-webkit-scrollbar-thumb{
     height: 90vh;
     overflow-y:scroll;
 }
+
 /* Personalizar las imagenes de los articulos  */
 
 .imagen {
@@ -409,3 +323,4 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(27, 27, 27);
     color: var(--Color-4);
 }
+
