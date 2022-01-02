@@ -9,6 +9,11 @@
     --white-color:#fff;
 }
 
+* {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+
 @media (max-width: 420px) 
 {
     .header__mobile{
