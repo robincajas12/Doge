@@ -1,0 +1,58 @@
+.encabezado {
+    background-color: #F1BA52;
+    color: #FFF;
+    border-radius: 0 0 30px 30px; 
+    position: fixed;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.contenedor {
+    width: 90%;
+    max-width: 900%;
+    margin: 0 auto;
+}
+
+/* Color de texto en el encabezado y quitar la decoracion, añadiendo un borde */
+
+.encabezado a {
+    color: #F1BA52;
+    text-decoration: none;
+    border-radius: 20px;
+
+}
+
+/* Alinear los links del encabezado y el logo */
+
+.contenedor-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ELiminar el estilo de listas en la navegacion */
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Colocar lado a lado en la navegacion */
+.nav ul li {
+    display: inline-block;
+}
+/* Color de fondo de los links en el nav agregando espaciado interno y una transicion para suavizar el cambio   */
+.nav ul li a {
+    background-color: #1D0A3F;
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+/* hover es la propiedad que hace cambiar cualquier objeto cuando se pase el cursor por encima */
+.nav ul li a:hover {
+    background-color: #FFF;
+    cursor: pointer;
+    border-radius: 20px;
+}
