@@ -196,6 +196,7 @@ body::-webkit-scrollbar-thumb{
     height: 90vh;
     overflow-y:scroll;
 }
+
 /* Personalizar las imagenes de los articulos  */
 
 .imagen {
@@ -322,3 +323,4 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(27, 27, 27);
     color: var(--Color-4);
 }
+
