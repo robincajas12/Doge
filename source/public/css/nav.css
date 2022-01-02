@@ -21,14 +21,6 @@
 }
 
 
-.img-mascota{
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
 /* Encabezado fijo */
 .encabezado {
     background-color: var(--Color-2);
@@ -147,4 +139,24 @@
 
 .notification_display {
     display: none;
+}
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--Color-1);
+    border-radius: 10px;
+}
+
+.div2::-webkit-scrollbar{
+    width: 8px;
+}
+
+
+.div2::-webkit-scrollbar-thumb{
+    background-color: #F1BA52;
+    border-radius: 10px;
 }
