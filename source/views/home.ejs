@@ -5,49 +5,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/isLogin.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Enlace con la hoja de estilo -->
-    <link rel="icon" href="/img/Dogeicon.ico">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/fonts/fuentes.css">
-    <link rel="stylesheet" href="/css/nav.css">
-    <!-- Aqui enlaces de las fuentes de google -->
-    <title>Doge Association</title>
+    <link rel="icon" href="img/Dogeicon.ico">
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Doge</title>
 
 
 </head>
 <body>
-    <div>
-        <%- include('nav') %>
-    </div>
-    <div class="contenedor2">       
-        <div class="div1 alinear">
-            <!-- Contenido PRINCIPAAAAAAAAAL -->
-           <section>
-                                <article class="contenidoprincipal">
-                                    <div class="imagenprincipal">
-                                        <img src="img/dropPet/perro.jpg" alt="Imagen principal" width="674" class="imagenprincipal" id="carrusel">                                       
-                                        <h3>
-                                            Consigue un mejor amigo y ayuda a combatir el abandono de mascotas
-                                        </h3>                                       
-                                        <a href="#" class="btn">Nuestra mision</a>
-                                    </div>
-                                </article>
-              </section>
-        </div>   
-        <div class="div2 alinear">                                    
-              <!-- Contenido adicional -->
-             <section class="contadi" id="contenedor-perros">
-                            <div class="tsecundario">
-                                <h2>Adoptame 🙁</h2>                         
-                            </div>
-                            <img id="loading" src="img/home/loading.svg">
-               </section>
+    <!-- Esto es el encabezado -->
+    <header class="encabezado" style="position: fixed; left: 0; top: 0;">
+
+       <div class="contenedor contenedor-nav">
+
+                <img src="img/Doge logo blanco.svg" alt="Vector" width="100">
+
+
+       <!-- Parte de la navegacion -->
+                <nav class="nav">
+
+                    <ul>
+                        <li class="li">
+                            <a href="" class="a"> Inicio </a>
+                        </li>
+
+                        <li class="li">
+                            <a href="" class="a">Navegar</a>
+                        </li>
+
+                        <li class="li">
+                            <a href="/dropPet" class="a">Poner en adopción</a>
+                        </li>
+
+                        <li class="li" id="bell">
+                            <div class="a svg"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                                  </svg>
+                                </div>
+
+                            
+                            <ul class="notification notification_display" id="notification">
+
+                                <h3 class="notification_h3">
+                                    Notificaciones
+                                </h3>
+
+                                <li class="notification_li">
+
+                                    <a href="#" class="notification_li_a"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam omnis tem 
+                                     </a>
+
+                                    <a href="#" >
+                                        <img src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/article/605097e95cafe8a1cbab5188/1-perro-corgi-camplo_2.jpg" alt="Imagen" class="notification_li_a_img">
+                                    </a>
+
+                                </li>
+
+                                
+                                <li class="notification_li">
+
+                                    <a href="#" class="notification_li_a"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam omnis tem 
+                                     </a>
+
+                                    <a href="#" >
+                                        <img src="https://images.ecestaticos.com/HGkYtf7o3mvAwpMri_Js51cDjPQ=/128x2:2145x1513/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F53a%2F72a%2F33e%2F53a72a33eea9f75e1130f52883a72bb2.jpg" alt="Imagen" class="notification_li_a_img">
+                                    </a>
+
+                                </li>
+
+                                
+                                <li class="notification_li">
+
+                                    <a href="#" class="notification_li_a"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam omnis tem 
+                                     </a>
+
+                                    <a href="#" >
+                                        <img src="https://www.eluniverso.com/resizer/eyyHgZdgA3ZjgdM0V-7VsuiC8Dc=/1006x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/3JOT23QQA5FXBOEPI2B4CUJIVE.jpg" class="notification_li_a_img">
+                                    </a>
+
+                                </li>
+
+                                
+                                <li class="notification_li">
+
+                                    <a href="#" class="notification_li_a"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, iure. 
+                                     </a>
+
+                                    <a href="#" >
+                                        <img src="https://as01.epimg.net/diarioas/imagenes/2021/07/21/actualidad/1626850303_934147_1626850623_noticia_normal.jpg" alt="Imagen" class="notification_li_a_img">
+                                    </a>
+
+                                </li>
+
+                                
+                                <li class="notification_li">
+
+                                    <a href="#" class="notification_li_a"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, iure. 
+                                     </a>
+
+                                    <a href="#" >
+                                        <img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/purina-por-que-vemos-tan-felices-a-los-gatos-en-cajas-de-carton.png?itok=xABhZ8v9" alt="Imagen" class="notification_li_a_img">
+                                    </a>
+
+                                </li>
+
+                                
+                                <li class="notification_li">
+
+                                    <a href="#" class="notification_li_a"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, iure. 
+                                     </a>
+
+                                    <a href="#" >
+                                        <img src="https://static.nationalgeographicla.com/files/styles/image_3200/public/01-cat-questions-nationalgeographic_1228126.jpg?w=1600&h=900" alt="Imagen" class="notification_li_a_img">
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="li">
+                            <a href="" id="salir" class="a">Salir</a>
+                        </li>
+                    </ul>
+
+                </nav>
         </div>
 
-        
+    </header>  
+    <div class="container-fluid">
+        <div class="row" style="position: relative; margin-top: 150px;">
+            <div class="col-lg-6">
+                <div class="container">
+                    <h1>Adopta y lucha contra el abandono de mascotas</h1>
+                    <a href="" class="btn">Adoptar</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container">
+                    <img style="object-fit: cover; width: 100%; height: 150%;" id="carrusel" src="https://www.hogarmania.com/archivos/201711/mascotas-adopcion-668x400x80xX.jpg" class="carrusel">
+                </div>
+            </div>
+        </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
     <script src="js/home.js"></script>
-    <script src="js/salir"></script>
+
+    <script src="js/notification.js"></script>
 </body>
 </html>

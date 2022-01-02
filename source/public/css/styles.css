@@ -1,11 +1,24 @@
-/* Se coloca la fuente regular de duolingo a toda la página */
-html {
-    font-family: duolingo2, Arial;
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
+:root {
+    --Color-1: #1D0A3F;
+    --Color-1-opacity: #1d0a3ff1; 
+    --Color-2: #F1BA52;
+    --Color-3: #f3c894;
+    --Color-4: #d9804d;
+    --Color-5: #a74b4b;
 }
+
+html {
+    font-family: 'Signika Negative', sans-serif;
+    box-sizing: border-box;
+}
+
 /* Elimina el margen por defecto del ordenador */
 body {
     margin: 0;
     padding: 0;
+
 }
 
 /* Todos los h1 tienen la fuente de duolingo bold */
@@ -18,6 +31,7 @@ h1 {
 
 .contenedor {
     width: 80%;
+    height: 100px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -32,21 +46,7 @@ img-mascota
     object-fit: cover;
     border-radius: 15px;
 }
-#loading{
-    width: 50px;
-    height: 50px;
-    animation: rotar 1.5s infinite;
-    animation-timing-function:linear;
-    order: 999;
-}
-@keyframes rotar{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
+
 /* Encabezado fijo */
 .encabezado {
     background-color: #F1BA52;
@@ -57,9 +57,10 @@ img-mascota
     width: 100%;
 }
 
+
 /* Color de texto en el encabezado y quitar la decoracion, añadiendo un borde */
 
-.encabezado a {
+.encabezado .a {
     color: #F1BA52;
     text-decoration: none;
     border-radius: 20px;
@@ -81,11 +82,11 @@ img-mascota
 }
 
 /* Colocar lado a lado en la navegacion */
-.nav ul li {
+.nav ul .li {
     display: inline-block;
 }
 /* Color de fondo de los links en el nav agregando espaciado interno y una transicion para suavizar el cambio   */
-.nav ul li a {
+.nav ul li .a {
     background-color: #1D0A3F;
     display: block;
     padding: 10px 20px;
@@ -93,16 +94,16 @@ img-mascota
     transition: all 0.3s ease;
 }
 /* hover es la propiedad que hace cambiar cualquier objeto cuando se pase el cursor por encima */
-.nav ul li a:hover {
+.nav ul li .a:hover {
     background-color: #FFF;
     cursor: pointer;
     border-radius: 20px;
 }
-/* como el header esta fijo, al contenido principal se le añade un espaciado interno arriba, abajo y a los lados */
-/* .contenedor2 {
-    padding: 0px 0;
-} */
 
+.notification {
+    width: 15px;
+    height: 15px;
+}
 /* Aqui va la edicion del contenido principal */
 
 
@@ -110,7 +111,7 @@ img-mascota
 
 .imagenprincipal{
     border-radius: 30px;
-    color: white;
+    overflow: hidden;
     width: 674px;
     height: 557px;
     /* background: url(/img/gato.jpg) no-repeat center/cover; */
@@ -119,13 +120,17 @@ img-mascota
     justify-content: flex-end; 
 }
 
+.imagenprincipal img {
+    width: 100%;
+}
+
 /* Editar la forma del boton en la imagen principal  */
 
 .btn {
     color: #F1BA52;
     display: block;
     width: 150px;
-    padding: 20px;
+    padding: 15px;
     background-color: #1D0A3F;
     text-align: center;
     text-decoration: none;
@@ -137,14 +142,15 @@ img-mascota
 /* Cuando pase el cursor, cambia las propiedades a las que se le describio */
 .btn:hover {
 
-    background-color: #FFF;
+    background-color: var(--Color-2);
+    color: var(--Color-1);
     cursor: pointer;
     border-radius: 30px;    
 
 }
 
 /* Añadi un margen para que no se apegue mucho a la imagen  */
-.imagenprincipal h3, a {
+.imagenprincipal h3, .btn {
     margin: 30px;
 
 }
@@ -207,6 +213,22 @@ section article {
     text-align: center;
 }
 
+#loading{
+    width: 30px;
+    height: 30px;
+    animation: rotar 1.5s infinite;
+    animation-timing-function:linear;
+    order: 999;
+}
+@keyframes rotar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 /* Donde esta la imagen principal, el contenedor ocupa el espacio minimo sin ocultar el contenido */
 
 .div1 {
@@ -259,6 +281,11 @@ body::-webkit-scrollbar {
     width: 10px;
 }
 
+body::-webkit-scrollbar-thumb{
+    background-color: var(--Color-1);
+    border-radius: 10px;
+}
+
 .div2::-webkit-scrollbar{
     width: 8px;
 }
@@ -287,4 +314,64 @@ body::-webkit-scrollbar {
 .adoptame__article:hover
 {
       color: rgb(99, 99, 99);
+}
+
+
+/* Area de notificaciones */
+
+.notification {
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    left: 750px;
+    background-color: var(--Color-1-opacity);
+    overflow-y: scroll;
+    width: max-content;
+    height: 400px;
+    height: 250px;
+}
+
+.notification_h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.notification_li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 340px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.notification_li_a {
+    color: var(--Color-2);
+    text-decoration: none;
+    width: 60%;
+}
+
+.notification_li_a_img {
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.notification::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--Color-1-opacity);
+    border-radius: 10px;
+}
+
+.notification::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: var(--Color-3);
+    border-radius: 10px;
+}
+
+.notification_display {
+    display: none;
 }
