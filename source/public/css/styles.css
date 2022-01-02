@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
 
-<<<<<<< HEAD
-html{
-    font-family: 'Signika Negative', sans-serif;
-}
-
-=======
 :root {
     --Color-1: #1D0A3F;
     --Color-1-opacity: #1d0a3ff1; 
@@ -16,10 +10,9 @@ html{
 }
 
 html {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Signika Negative',;
     box-sizing: border-box;
 }
->>>>>>> 42c3de294c42f7ab3a9458892d812d56c4d089f5
 
 /* Elimina el margen por defecto del ordenador */
 body {
@@ -28,11 +21,6 @@ body {
 
 }
 
-/* Todos los h1 tienen la fuente de duolingo bold */
-
-h1 {
-    font-family: duolingo, Arial;
-}
 
 /* Con esto ajusto el espacio en el encabezado */
 
@@ -42,10 +30,8 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
 }
-/*
-diseño de las imagenes 
-img-mascota
-*/
+
+
 .img-mascota{
     overflow: hidden;
     width: 100%;
@@ -260,23 +246,12 @@ section article {
     
 }
 
-/* Todas las imagenes de los articulos, es decir del contenido adicional no tendran un tamaño maximo de 200px */  
-/* .contadi article img{
-    width: 200px;
-} */
-
 /* Colocamos el contenido adicional a lado del principal */
 
 .alinear {
     display: inline-block;
 }
 
-/* .alinear {
-    background-color: lawngreen;
-    
-} */
-
-/* Configuro el espacio interno de los bloques de todo el contenido excepto el encabezado  */
 .contenedor2 {
     padding-top: 100px;
     padding-bottom: 0px;

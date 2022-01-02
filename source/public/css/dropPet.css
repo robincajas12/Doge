@@ -8,6 +8,7 @@
     --Color-5: #a74b4b;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -15,6 +16,7 @@ body {
 }
 
 .div1 {
+    /* background-color: blueviolet; */
     width: 80%;
     display: flex;
     align-items: center;
@@ -117,6 +119,5 @@ body {
     background-color: #fff;
     color: #2a8d21;
 }
-
 
 
