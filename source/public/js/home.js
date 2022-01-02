@@ -26,7 +26,8 @@ let i = 0;
 setInterval(()=>{
     if(i < arryImgs.length)
     {
-        carrucel.setAttribute('src', arryImgs[i]);
+        // carrucel.setAttribute('src', arryImgs[i]);
+        carrucel.style.backgroundImage = `url(${arryImgs[i]})`
         i++
     }else i = 0;
-},(1000*5));
+},(1000*3));
