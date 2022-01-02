@@ -7,6 +7,8 @@
     --Color-3: #f3c894;
     --Color-4: #d9804d;
     --Color-5: #a74b4b;
+    --Color-78:rgb(32, 32, 32);
+    --font-family2:'Signika Negative', sans-serif;
 }
 
 
@@ -193,4 +195,130 @@ body::-webkit-scrollbar-thumb{
 .div2{
     height: 90vh;
     overflow-y:scroll;
+}
+/* Personalizar las imagenes de los articulos  */
+
+.imagen {
+    border-radius: 30px;
+    height: 150px;
+    width: 150px;
+}
+.adoptame__article{
+    width: 40vw;
+    color: rgb(99, 99, 99);
+    border-radius: 30px;
+}
+.adoptame__article:hover
+{
+      color: rgb(99, 99, 99);
+}
+
+
+/* Area de notificaciones */
+
+.notification {
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    left: 750px;
+    background-color: var(--Color-1-opacity);
+    overflow-y: scroll;
+    width: max-content;
+    height: 400px;
+    height: 250px;
+}
+
+.notification_h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.notification_li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 340px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.notification_li_a {
+    color: var(--Color-2);
+    text-decoration: none;
+    width: 60%;
+}
+
+.notification_li_a_img {
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.notification::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--Color-1-opacity);
+    border-radius: 10px;
+}
+
+.notification::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: var(--Color-3);
+    border-radius: 10px;
+}
+
+.notification_display {
+    display: none;
+}
+.div__3img{
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.msg-home{
+    font-family: var(--font-family2);
+    font-size: 1.5em;
+    text-align: center;
+}
+.footer{
+    border-top: 1px solid var(--Color-78);
+    background-color: var(--Color-78);
+    text-align: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+.footer__ul{
+    list-style: none;
+}
+.footer__ul-li-a{
+    text-decoration: none;
+    color: var(--Color-4);
+}
+.container-img-fixed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container-carrusel{
+    padding-top: 50px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.info__users{
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    color: var(--Color-4);
 }
