@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
 :root {
     --Color-1: #1D0A3F;
     --Color-2: #F1BA52;
@@ -6,18 +8,11 @@
     --Color-5: #a74b4b;
 }
 
-body {
-    font-family: duolingo-2,'Times New Roman', Times, serif;
-}
-
-h1 {
-    font-family: duolingo;
-}
 
 body {
     margin: 0;
     padding: 0;
-
+    font-family: 'Signika Negative', sans-serif;
 }
 
 .div1 {
@@ -32,7 +27,6 @@ body {
 } 
 
 .logo {
-    background-color: rgb(53, 53, 53);
     width: 40%;
     height: 400px;
     background: url(/img/logo.png) no-repeat center/cover;
@@ -54,7 +48,6 @@ body {
 .form label {
     display: block;
     color: var(--Color-2);
-    font-family: duolingo, Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
@@ -127,5 +120,4 @@ body {
     color: #2a8d21;
 }
 
-/* Parte del contenedor de la imagen que se previsualizara  */
 

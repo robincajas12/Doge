@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
 :root {
     --Color-1: #1D0A3F;
     --Color-2: #F1BA52;
@@ -6,18 +8,13 @@
     --Color-5: #a74b4b;
 }
 
-body {
-    font-family: duolingo-2,'Times New Roman', Times, serif;
-}
 
-h1 {
-    font-family: duolingo;
-}
 
 body {
     margin: 0;
     background: url(/img/login/fondoweb.jpg) no-repeat;
     background-size: 100%;
+    font-family: 'Signika Negative', sans-serif;
 }
 
 p, a {
@@ -57,7 +54,6 @@ a:hover {
     display: block;
     flex-direction: column;
     justify-content: flex-end;
-    /* margin-right: 20px; */
 }
 
 .frase {
@@ -66,7 +62,6 @@ a:hover {
     position: absolute;
     top: 330px;
     left: 15px;
-    font-family: duolingo;
     font-size: 30px;
     width: 500px;
 }
@@ -86,7 +81,6 @@ a:hover {
 .container label {
     display: block;
     color: var(--Color-2);
-    font-family: duolingo, Arial, Helvetica, sans-serif;
     font-size: 20px;
 }  
 

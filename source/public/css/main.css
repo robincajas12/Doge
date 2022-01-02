@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
 :root{
     --blue-color:#1d0a3f;
     --orange-yelow-color:#f1ba52;
@@ -6,6 +8,11 @@
     --red-color:#a74b4b;
     --white-color:#fff;
 }
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+}
+
 
 @media (max-width: 420px) 
 {
