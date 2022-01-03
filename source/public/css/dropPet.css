@@ -121,4 +121,14 @@ body {
     color: #2a8d21;
 }
 
+input[placeholder~='Nombre'] {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Signika Negative';
+    text-transform: uppercase;
+}
 
+textarea[placeholder~='Descripción'] {
+    font-size: 1em;
+    font-family: 'Signika Negative';
+}
