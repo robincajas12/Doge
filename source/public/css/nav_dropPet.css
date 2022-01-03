@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
+:root {
+    --Color-1: #1D0A3F;
+    --Color-1-opacity: #1d0a3ff1;
+    --Color-2: #F1BA52;
+    --Color-3: #f3c894;
+    --Color-4: #d9804d;
+    --Color-5: #a74b4b;
+}
+
+* {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+
+.contenedor {
+    width:80%;
+    height: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Encabezado fijo */
+.encabezado {
+    background-color: var(--Color-2);
+    z-index: 1;
+    color: var(--Color-5);
+    border-radius: 0 0 30px 30px; 
+
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+
+
+/* Color de texto en el encabezado y quitar la decoracion, añadiendo un borde */
+
+.encabezado .a {
+    color: #F1BA52;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* Alinear los links del encabezado y el logo */
+
+.contenedor-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ELiminar el estilo de listas en la navegacion */
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Colocar lado a lado en la navegacion */
+.nav ul .li {
+    display: inline-block;
+}
+/* Color de fondo de los links en el nav agregando espaciado interno y una transicion para suavizar el cambio   */
+.nav ul li .a {
+    background-color: #1D0A3F;
+    display: block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.nav ul li .a:hover {
+    background-color: #FFF;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.notification {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* Area de notificaciones */
+
+.notification {
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    left: 750px;
+    background-color: var(--Color-3);
+    overflow-y: scroll;
+    width: max-content;
+    height: 400px;
+    height: 250px;
+}
+
+.notification_h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.notification_li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 340px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.notification_li_a {
+    color: var(--Color-1);
+    text-decoration: none;
+    width: 60%;
+}
+
+.notification_li_a_img {
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.notification::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--Color-3);
+    border-radius: 10px;
+}
+
+.notification::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: var(--Color-1);
+    border-radius: 10px;
+}
+
+.notification_display {
+    display: none;
+}
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--Color-1);
+    border-radius: 10px;
+}
+
+.div2::-webkit-scrollbar{
+    width: 8px;
+}
+
+
+.div2::-webkit-scrollbar-thumb{
+    background-color: #F1BA52;
+    border-radius: 10px;
+}
