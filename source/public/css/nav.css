@@ -69,7 +69,8 @@
     margin: 0 10px;
     transition: all 0.3s ease;
 }
-/* hover es la propiedad que hace cambiar cualquier objeto cuando se pase el cursor por encima */
+
+
 .nav ul li .a:hover {
     background-color: #FFF;
     cursor: pointer;
