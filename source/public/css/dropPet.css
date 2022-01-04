@@ -17,6 +17,7 @@ body {
 
 .div1 {
     /* background-color: blueviolet; */
+    z-index: 0;
     width: 80%;
     display: flex;
     align-items: center;
@@ -120,4 +121,14 @@ body {
     color: #2a8d21;
 }
 
+input[placeholder~='Nombre'] {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Signika Negative';
+    text-transform: uppercase;
+}
 
+textarea[placeholder~='Descripción'] {
+    font-size: 1em;
+    font-family: 'Signika Negative';
+}
