@@ -21,10 +21,12 @@
     margin: 0 auto;
 }
 
+
 /* Encabezado fijo */
 .encabezado {
     background-color: var(--Color-2);
-    color: #FFF;
+    z-index: 1;
+    color: var(--Color-5);
     border-radius: 0 0 30px 30px; 
 
     top: 0;
@@ -89,7 +91,7 @@
     position: absolute;
     top: 80px;
     left: 750px;
-    background-color: var(--Color-1-opacity);
+    background-color: var(--Color-3);
     overflow-y: scroll;
     width: max-content;
     height: 400px;
@@ -114,7 +116,7 @@
 }
 
 .notification_li_a {
-    color: var(--Color-2);
+    color: var(--Color-1);
     text-decoration: none;
     width: 60%;
 }
@@ -127,13 +129,13 @@
 
 .notification::-webkit-scrollbar{
     width: 5px;
-    background-color: var(--Color-1-opacity);
+    background-color: var(--Color-3);
     border-radius: 10px;
 }
 
 .notification::-webkit-scrollbar-thumb{
     width: 5px;
-    background-color: var(--Color-3);
+    background-color: var(--Color-1);
     border-radius: 10px;
 }
 
