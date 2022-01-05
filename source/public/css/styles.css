@@ -356,8 +356,8 @@ body::-webkit-scrollbar-thumb{
     height: 40vh;
     align-items: center;
     justify-content: center;
-    background-color: rgb(27, 27, 27);
-    color: var(--Color-4);
+    background-color: var(--Color-3);
+    color: var(--Color-1);
 }
 /* 
 Carrousel section */
