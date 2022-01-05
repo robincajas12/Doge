@@ -24,12 +24,12 @@
                     <input type="text" value="<%=data.petName%> " class="readonly" readonly>
         
                     <label for="textarea">Descripción</label>
-                    <input type="text" placeholder="" value="<%=data.description %> " class="readonly" readonly>
-        
+                    <textarea class="readonly" name="comment" id="#" cols="30" rows= "5" readonly style="height: 200px; font-size: 1rem;">
+<%=data.description %> 
+                    </textarea>       
                     <label for="number">Número de telefono del propietario</label>
                     <input type="tel" placeholder="" value="<%=data.phone %>" name="input_tel" id="#" title="" readonly>
-        
-        
+    
                     <h2> Datos para poder adoptar</h2>
                     <label for="">Dirección exacta del lugar donde permanecerá el animal (incluir sector)</label>
                     <input type="text" placeholder="Dirección" class="direction" required>
@@ -41,12 +41,10 @@
                     <textarea name="comment" id="#" cols="30" rows= "5" ></textarea>
         
                 </div>
-                <input type="submit" id="btn-adoptar" value="Realizar solicitud" class="submit"> 
+                <input type="button" id="btn-adoptar" value="Realizar solicitud" class="submit"> 
             </form>   
         </div>
     </div>
-
-    <script src="js/notification.js"></script>
-    <script src="js/adoptar.js"></script>
+    <script src="/js/adoptar.js"></script>
 </body>
 </html>

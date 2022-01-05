@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/isLogin.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <link rel="icon" href="/img/Dogeicon.ico">
 
@@ -149,11 +149,30 @@
     </header>      
     
 
-    <div class="container-img-fixed" id="carrusel" style="background-attachment: fixed; background-image: url(/img/dropPet/perro.jpg); background-size: cover; background-repeat: no-repeat;">
+    <!-- <div class="container-img-fixed">
         <p class="h1" style="text-shadow: 5px 5px 10px rgb(0, 0, 0); color: rgb(255, 255, 255); text-align: center;">Un click en este botón y cambiarás el mundo!</p>
         <a class="btn" href="/publicaciones">Adoptar</a>
 
-    </div>
+    </div> -->
+    <div>
+        <div class="carousel slide" id="carousel-adoptar" style="width: 100%;
+        height: 100vh;" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carrousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/article/5f4e647d5cafe8e117b75536/1-adoptar-perro-refugio_1.jpg" class="img-carousel">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.hogarmania.com/archivos/201711/mascotas-adopcion-668x400x80xX.jpg" class="img-carousel">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFictb4GjEujokxfS02oymw8j8hy7w2RCZag&usqp=CA" class="img-carousel">
+                </div>
+            </div>
+        </div>
+        <div class="container-img-fixed">
+            <p class="h1" style="text-shadow: 5px 5px 10px rgb(0, 0, 0); color: rgb(255, 255, 255); text-align: center;">Un click en este botón y cambiarás el mundo!</p>
+            <a class="btn" href="/publicaciones">Adoptar</a>
+        </div>
     </div>
     <div class="info__users">
         <p class="fs-1" style="text-align: center;">Mas de 20 organizaciones y x personas registradas</p>
@@ -214,7 +233,7 @@
         ScrollReveal().reveal('.msg-home', { delay: 300 });
         ScrollReveal().reveal('.footer', { delay: 100 });
     </script>
-    <script src="js/home.js"></script>
+    <!-- <script src="js/home.js"></script> -->
 
     <script src="js/notification.js"></script>
 </body>

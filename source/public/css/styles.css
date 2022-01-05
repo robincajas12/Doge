@@ -337,6 +337,12 @@ body::-webkit-scrollbar-thumb{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #1d0a3f83;
+    position: absolute;
 
 }
 .container-carrusel{
@@ -353,4 +359,24 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(27, 27, 27);
     color: var(--Color-4);
 }
+/* 
+Carrousel section */
 
+
+#carousel-adoptar{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.carousel-item{
+    width: 100%;
+    height: 100%;
+    background-color: #1D0A3F;
+}
+.img-carousel{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

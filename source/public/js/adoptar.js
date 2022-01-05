@@ -1,4 +1,5 @@
 const btnAdoptar = document.getElementById('btn-adoptar');
-addEventListener('click',()=>{
+alert('nour');
+btnAdoptar.addEventListener('click',()=>{
     alert('Siuuuuuu')
 });
